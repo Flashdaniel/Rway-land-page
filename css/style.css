@@ -50,7 +50,7 @@
 body {
   background: var(--color-bg1);
   color: var(--color-dark);
-  font-family: monospace;
+  font-family: var(--font-azeret, monospace);
   font-size: var(--step--1);
   font-weight: 600;
   margin: 0;
