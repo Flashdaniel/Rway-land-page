@@ -52,7 +52,6 @@ body {
   color: var(--color-dark);
   font-family: var(--font-azeret, monospace);
   font-size: var(--step--1);
-  font-weight: 600;
   margin: 0;
 }
 
@@ -91,7 +90,6 @@ h3,
 h4 {
   color: var(--color-very-dark);
   font-family: var(--font-azeret);
-  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -102,9 +100,8 @@ button {
 
 h1 {
   font-size: var(--step-2);
-  font-weight: 800;
   text-transform: uppercase;
-  max-inline-size: clamp(20ch, 20ch + 10vw, 35ch);
+  max-inline-size: clamp(24ch, 24ch + 15vw, 38ch);
 }
 
 h2 span {
@@ -196,7 +193,7 @@ footer {
   background: var(--nav-link-bg, var(--color-btn));
   padding: var(--btn-pad-top-bottom, var(--space-3xs)) var(--space-2xs);
   font-size: var(--space-xs);
-  max-inline-size: var(--max-nav-inline-link, 10rem);
+  max-inline-size: var(--max-nav-inline-link, 15rem);
   border-radius: var(--border-rad);
   text-align: center;
   color: var(--nav-link-color, var(--color-white));
