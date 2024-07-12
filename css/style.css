@@ -81,6 +81,11 @@ a {
   color: currentColor;
 }
 
+a > img {
+  display: inline;
+  margin-inline-start: 0.2rem;
+}
+
 nav ul {
   list-style: none;
 }
@@ -96,6 +101,11 @@ h4 {
 button {
   color: currentColor;
   border: none;
+}
+
+button > img {
+  display: inline;
+  margin-inline-start: 0.2rem;
 }
 
 h1 {
@@ -192,8 +202,8 @@ footer {
 .nav-link {
   background: var(--nav-link-bg, var(--color-btn));
   padding: var(--btn-pad-top-bottom, var(--space-3xs)) var(--space-2xs);
-  font-size: var(--space-xs);
-  max-inline-size: var(--max-nav-inline-link, 15rem);
+  font-size: var(--space-2xs);
+  max-inline-size: var(--max-nav-inline-link, 10rem);
   border-radius: var(--border-rad);
   text-align: center;
   color: var(--nav-link-color, var(--color-white));
@@ -314,7 +324,8 @@ header > a {
   --nav-link-color: var(--color-very-dark);
   --nav-link-bg: var(--color-white);
   text-align: left;
-  max-inline-size: 8rem;
+  max-inline-size: auto;
+  display: inline-block;
 }
 
 .explore_platform-bg {
@@ -349,7 +360,7 @@ header > a {
 
 .strategy_btn {
   text-align: left;
-  max-inline-size: 9rem;
+  font-size: var(--space-2xs);
 }
 
 .numbering-01::before {
@@ -606,7 +617,7 @@ figure > div + div {
   }
 
   .newsroom a {
-    max-width: 10rem;
+    max-width: 12rem;
     margin-inline: auto;
   }
 
