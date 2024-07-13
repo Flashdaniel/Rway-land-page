@@ -7,10 +7,12 @@
   --color-light-white: hsla(0, 0%, 100%, 85%);
   --color-lighter-white: hsla(0, 0%, 100%, 64%);
   --color-primary: hsl(242, 95%, 60%);
+  --color-primary-hover: hsla(242, 95%, 60%, 0.832);
   --color-bg1: #1c1c1e;
   --color-bg1-stroke: hsl(0, 0%, 100%, 12%);
   --color-news-stroke: hsl(0, 0%, 100%, 4%);
   --color-btn: hsl(225, 4%, 19%);
+  --color-btn-hover: hsla(240, 3%, 19%, 0.699);
   --color-dark: hsl(0, 0%, 0%, 65%);
   --color-000: hsl(0, 0%, 0%, 32%);
   --color-light-dark: hsla(0, 0%, 0%, 0.45);
@@ -150,6 +152,10 @@ footer {
   color: var(--color-light-white);
 }
 
+footer a:hover {
+  text-decoration: underline;
+}
+
 .about {
   padding-inline: var(--space-s-m);
   padding-block-end: var(--space-xl);
@@ -204,12 +210,21 @@ footer {
 .nav-lang {
   background: var(--color-light-white);
   color: var(--color-very-dark);
-  padding: 0.3rem 0.5rem;
+  font-size: var(--space-2xs);
+  padding: var(--btn-pad-top-bottom, var(--space-3xs)) var(--space-s);
+}
+
+nav > a:first-child > img {
+  width: var(--step-4);
+}
+
+nav > a:first-child:hover {
+  background: var(--nav-link-bg, var(--color-btn));
 }
 
 .nav-link {
   background: var(--nav-link-bg, var(--color-btn));
-  padding: var(--btn-pad-top-bottom, var(--space-3xs)) var(--space-2xs);
+  padding: var(--btn-pad-top-bottom, var(--space-3xs)) var(--space-s);
   font-size: var(--space-2xs);
   max-inline-size: var(--max-nav-inline-link, 10rem);
   border-radius: var(--border-rad);
@@ -218,12 +233,20 @@ footer {
   border: var(--border, 1px solid var(--color-btn));
 }
 
+.nav-link:hover {
+  background-color: var(--color-btn-hover);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
 .btn-primary {
   color: var(--primary-color, var(--color-white));
   background-color: var(--color-primary);
   padding-inline: var(--space-s);
   padding-block: var(--space-3xs);
-  font-size: var(--space-xs);
+  font-size: var(--space-2xs);
   border-radius: 2px;
   text-align: center;
 }
@@ -268,6 +291,10 @@ header > a {
   text-align: var(---text-align, center);
   padding: var(--space-2xs);
   color: var(--color-light-dark);
+}
+
+.aside-link:hover {
+  background-color: var(--color-very-light-dark);
 }
 
 .about a {
@@ -336,6 +363,10 @@ header > a {
   display: inline-block;
 }
 
+.btn-color-except:hover {
+  background-color: var(--color-light-white);
+}
+
 .explore_platform-bg {
   background-color: var(--color-explore);
   margin-block-start: 0;
@@ -369,6 +400,10 @@ header > a {
 .strategy_btn {
   text-align: left;
   font-size: var(--space-2xs);
+}
+
+.strategy_btn:hover {
+  background-color: var(--color-very-light-dark);
 }
 
 .numbering-01::before {
@@ -514,9 +549,14 @@ figure > div + div {
 
 .newsroom a {
   border: 2px solid var(--color-202023);
-  padding: var(--space-2xs);
+  padding: var(--btn-pad-top-bottom, var(--space-3xs)) var(--space-s);
+  font-size: var(--space-2xs);
   text-align: center;
   color: var(--color-light-white);
+}
+
+.newsroom a:hover {
+  background-color: var(--color-very-light-dark);
 }
 
 .newsroom > div {
@@ -565,6 +605,14 @@ figure > div + div {
 }
 
 @media (min-width: 41em) {
+  header {
+    background-image: url(../images/hero-desktop.jpg);
+  }
+
+  .scroll-divide {
+    width: 70%;
+  }
+
   .visual-hidden {
     display: block;
   }
@@ -591,7 +639,8 @@ figure > div + div {
     margin-block-start: var(--space-2xl);
   }
 
-  .strategy h3 {
+  .strategy h3,
+  .ecosystem h3 {
     margin: auto;
   }
 
@@ -631,7 +680,7 @@ figure > div + div {
   }
 
   .newsroom a {
-    max-width: 12rem;
+    max-width: 15rem;
     margin-inline: auto;
   }
 
